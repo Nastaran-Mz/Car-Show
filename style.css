@@ -1,0 +1,382 @@
+ /* Global */
+ *{
+     box-sizing: border-box;
+ }
+:root {
+    --mainBlue: #40ACF1;
+    --transparentBlue: rgba(64,172,241,0.7);
+    --mainWhite: #FFFFFF;
+    --mainBlack: #292f36;
+    --mainGray: rgb(216,214,214);
+    --mainYellow: #e3b505;
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: bold;
+	src: url('files/fonts/eot/IRANSansWeb.eot');
+	src: url('files/fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), 
+		 url('files/fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), 
+		 url('files/fonts/woff/IRANSansWeb_Bold.woff') format('woff'),  
+		 url('files/fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+body {
+    font-family: IRANSans;
+	font-style: normal;
+	font-weight: bold;
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    overflow-x: hidden;
+}
+/* Preloader Section */
+.preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--mainWhite);
+    z-index: 1001;
+}
+.preloaderhide {
+    display: none !important;
+}
+/* Preloader Section end */
+/* Navbar */
+.navbar {
+    background: var(--mainWhite);
+}
+.nav-icon {
+    font-size: 1.5rem;
+    color: var(--mainBlue);
+    text-decoration: none !important;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.nav-icon:hover {
+    color: var(--mainBlack);
+}
+.nav-link {
+    color: var(--mainBlack);
+    transition: color 0.3s linear;
+}
+.nav-link:hover {
+    color: var(--mainBlue);
+}
+.navbar-toggler {
+    color: var(--mainBlue);
+    outline-color: var(--mainBlue) !important;
+}
+/* Navbar End */
+
+/* header Section */
+.haeder {
+    color: var(--mainWhite);
+    clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+    overflow: hidden;
+}
+.height-max {
+    height: calc(100vh - 92px);
+    background: url("img/headerBcg.jpeg")center/cover no-repeat fixed;
+    animation: zoom 20s ease-in 5s infinite;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4) translateX(-10%);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.title-heading {
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 0.3rem solid var(--mainBlue);
+}
+.title {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+@media only screen and (min-width:768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+.title-icon {
+    color: var(--mainBlue);
+    text-decoration: none !important;       
+}
+.title-icon:hover {
+    color: var(--mainBlue);
+    opacity: 0.6;
+}
+/* header Section end */
+
+/* Skills Section */
+.section-title-special {
+    background: var(--transparentBlue);
+    color: var(--mainWhite);
+    padding:0.5rem 2rem 0.2rem 2rem;
+    clip-path: polygon(10% 0,100% 0,90% 100%,0 100%);
+}
+/* Skills Section end */
+
+
+/* single Skills Section  */
+.sills-icon {
+    font-size: 3rem;
+    color: var(--mainYellow);
+    background: var(--mainGray);
+    padding-bottom: 0 !important;
+}
+.sills-icon:hover {
+    color: var(--mainYellow);
+}
+.underline {
+    width: 4rem;
+    height: 0.3rem;
+    background: var(--mainBlue);
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+/* single Skills Section end */
+
+/* inventory section */
+.inventory {
+    background: var(--mainGray);
+}
+.car-img {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.car-card {
+    border:none !important;
+}
+.car-value {
+    background: var(--mainBlue);
+    color: var(--mainWhite);
+    clip-path: polygon(15% 0,85% 0,100% 100%,0 100%);
+    transition: clip-path 0.5s ease;
+}
+.car-value:hover {
+    clip-path: polygon(0% 0,100% 0,100% 100%,0 100%);
+}
+.card-footer {
+    background: var(--mainWhite);
+    border-top:1px solid gainsboro;
+}
+/* inventory section end */
+/* question Section */
+.question {
+  background: url('img/questionBcg.jpeg')center/cover fixed no-repeat;  
+}
+.question-gray {
+    background: rgba(79,109,122,0.75);
+}
+.question-yellow {
+    background: rgba(255,181,5,0.75);
+}
+.question-icon {
+    font-size: 4rem;
+    color: var(--mainBlue);
+    transition: transform 0.5s ease;
+}
+.question-icon:hover {
+    transform: translateY(-10%);
+    color: var(--mainBlue);
+}
+.question-info {
+    color: var(--mainWhite);
+}
+/* question Section end */
+
+/* featured section */
+.featured {
+    background: var(--mainGray);
+}
+.featured-item {
+    background: var(--mainWhite);
+    border-radius: 0.5rem;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out , transform 0.5s ease;
+    cursor: pointer;
+}
+.featured-item:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+.featured-icon {
+    color: var(--mainYellow);
+    font-size: 1.5rem;
+}
+.featured-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.img-container {
+    background: var(--mainBlue);
+    position: relative;
+    overflow: hidden;
+}
+.featured-photo {
+    transition: transform 0.5s ease-in-out;
+}
+.img-container:hover .featured-photo {
+    transform: scale(1.3);
+    opacity: 0.5;
+}
+.featured-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5rem;
+    color: var(--mainBlack);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 1001;
+}
+.featured-link:hover {
+    color: var(--mainWhite);
+}
+.featured-img:hover .featured-link {
+    opacity: 1;
+}
+/* featured section end */
+
+/* gallery section */
+.gallery-item {
+    background: var(--mainYellow);
+    position: relative;
+    cursor: pointer;
+}
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem double var(--mainWhite);
+    outline-offset: -2rem;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+.gallery-item:hover::after {
+    transform: scale(1);
+}
+.gallery-img {
+    transition: all 0.5s ease-in-out;
+}
+.gallery-item:hover .gallery-img{
+    opacity: 0.5;
+}
+/* gallery section end */
+
+/* contact section */
+.contact {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('img/headerBcg.jpeg ')center/cover fixed no-repeat;
+}
+.contact-input , .contact-input:focus {
+    background: transparent;
+    border-color: var(--mainYellow);
+}
+.contact-input::placeholder {
+    color: var(--mainYellow);
+}
+.btn-contact {
+    background: transparent;
+    color: var(--mainYellow);
+    border-color: var(--mainYellow);
+    transition: all 0.5s ease-in;
+}
+.btn-contact:hover {
+    background: var(--mainYellow);
+    color: var(--mainWhite);
+}
+/* contact section end */
+/* services section */
+.services {
+    position: relative;
+    min-height: 85vh;
+    min-width: 75vw;
+    margin: 0 auto;
+    clip-path: polygon(0 10%,100% 0,100% 90%,0 100%);
+}
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+.video-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--transparentBlue);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.service {
+    background: var(--mainBlack);
+    color: var(--mainWhite);
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+.service:hover {
+    background: var(--mainWhite);
+    color: var(--mainBlack);
+    padding-left: 15% !important;
+}
+.service-icon {
+    font-size: 4rem;
+    color: var(--mainYellow);
+}
+/* services section end */
+/* customer */
+.customer-card-body {
+    margin-top: -4rem !important;
+    color: var(--mainGray);
+}
+.customer-img {
+    border: 0.5rem solid white;
+}
+.customer-name {
+    color: var(--mainBlue);
+}
+.customer-job {
+
+}
+.customer-quote {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.customer-icon {
+    font-size: 2rem;
+    color: var(--mainYellow);
+}
+/* footer */
+.footer {
+    background: var(--mainBlack);
+}
+.footer-icon {
+    color: var(--mainYellow);
+    font-size: 2rem;
+    text-decoration: none;
+}
+.footer-icon:hover {
+    color: var(--mainYellow);
+}
